@@ -33,7 +33,7 @@ function createGrid(cols) {
         let newGridCol = prompt("Please indicate number of squares per side in new game");
     
         container.innerHTML = '';
-        if (newGridCol >= 1 && newGridCol <= 50) {
+        if (newGridCol >= 1 && newGridCol <= 100) {
             createGrid(newGridCol);
           } else {
             alert('Please enter values between 1 and 50');
