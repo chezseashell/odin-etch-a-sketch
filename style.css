@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+            
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    margin:auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    margin: 0;
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px  lightgreen;
+    margin-top: 5vh;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap ;
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 5vh;
+    outline: 1px solid black;
+    gap: 2px;
+}
+
+.grid-item {
+    padding:0;
+    border: 1px solid lightgray;
+    flex: 1 0 auto;
+    aspect-ratio: 1/1;
+    
+}
+
+.grid-item:hover {
+    background-color: lightgray;
+}
+
+.grid-item-color {
+    background-color: lightgray;
+}
+}
