@@ -13,149 +13,20 @@ body {
     font-size: 16px;
 }
 
-.dialog {
-    width: 90%;
-    max-width: 600px;
-    border: none;
-    outline: none;
-    padding: 0px;
-    overflow: hidden;
-    margin: auto;
-}
-
-.dialog::backdrop {
-    background: rgba(0,0,0,0.4);
+h1 {
+    margin-top: 3vh;
+    font-size: 2.75rem;
 }
 
 
-.dialog_header,
-.dialog_content {
-    padding: 1.25em;
-}
 
-.dialog_header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: black;
-    color: white;
-    font-size: 1.2em;
-}
-
-.dialog_icon {
-    margin-right: 8px;
-    font-size: 1.3em;
-    color: lightgreen;
-}
-
-.dialog_title {
-    font-weight: 500;
-}
-
-.dialog_close {
-    background: none;
-    outline: none;
-    border: none;
-    color: lightgreen;
-    transform: scale(2.5);
-    margin-left: auto;
-    transition: opacity 0.5s;
-}
-
-.dialog_close:hover {
-    opacity:0.7;
-    cursor: pointer;
-}
-
-.dialog_content {
-    display: flex;
-    flex-direction: row;
-    color: #555;
-    font-size: .9em;
-    line-height: 1.8em;
-    text-align: left;
-    align-content: bottom;
-}
-
-.dialog_input {
-    max-width: 65px;
-    height: 70%;
-    box-sizing:border-box;
-    /* margin-top: 10px; */
-    margin-left: 15px;
-    background-color: #e8e8e8;
-    border: none;
-    /* border-bottom: 2px solid  lightgreen; */
-    color: #333;
-    padding: 10px;
-    outline: none;
-    font-size: 1.4em;
-    font-weight: 400;
-    
-}
-
-.dialog i {
-    width: 1px;
-	background-color: gray;
-	left: 5px;
-	top: 10%;
-	animation-name: blink;
-	animation-duration: 800ms;
-	animation-iteration-count: infinite;
-	opacity: 1;
-    text-align: center;
-}
-
-
-.dialog_input:focus + i {
-    display: none;  ;
-}
-
-@keyframes blink {
-	from { opacity: 1; }
-	to { opacity: 0; }
-}
-
-.dialog_footer {
-    display: flex;
-    padding: 0;
-    border-top: 1px solid black;
-
-}
-
-.dialog_button {
-    border: none;
-    background-color: white;
-    color: black;
-    font-size:.9em;
-    font-weight: 300;
-    cursor: pointer;
-    outline: none;
-    flex-grow: 1;
-    padding: 10px;
-    transition: background-color 0.5s;
-}
-
-.dialog_button--outline {
-    border-left: 1px solid black;
-    background-color: #e8e8e8;
-    font-size:.9em;
-    color: black;
-    flex-grow: 1;
-}
-
-.dialog_button:hover {
-    font-weight: 600;
-    background-color: lightgreen;
-}
-
-#start-btn {
+#showPrompt {
     padding: 10px;
     margin: 0;
     background-color: black;
     color: white;
     box-shadow: 5px 5px  lightgreen;
-    margin-top: 5vh;
+    margin-top: 3vh;
     letter-spacing: .2em;
     text-transform: uppercase;
 
@@ -189,85 +60,3 @@ body {
 
 
 
-/* ICONS */
-@font-face {
-    font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?xw4fz7');
-    src:  url('fonts/icomoon.eot?xw4fz7#iefix') format('embedded-opentype'),
-      url('fonts/icomoon.ttf?xw4fz7') format('truetype'),
-      url('fonts/icomoon.woff?xw4fz7') format('woff'),
-      url('fonts/icomoon.svg?xw4fz7#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
-  
-  [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-add:before {
-    content: "\e909";
-  }
-  .icon-alert1:before {
-    content: "\e90a";
-  }
-  .icon-ask:before {
-    content: "\e90b";
-  }
-  .icon-launch:before {
-    content: "\e90c";
-  }
-  .icon-reply:before {
-    content: "\e90d";
-  }
-  .icon-subtract:before {
-    content: "\e90e";
-  }
-  .icon-type1:before {
-    content: "\e90f";
-  }
-  .icon-undo:before {
-    content: "\e910";
-  }
-  .icon-information:before {
-    content: "\e911";
-  }
-  .icon-alert:before {
-    content: "\e900";
-  }
-  .icon-warning:before {
-    content: "\e901";
-  }
-  .icon-check:before {
-    content: "\e902";
-  }
-  .icon-help:before {
-    content: "\e903";
-  }
-  .icon-plus:before {
-    content: "\e904";
-  }
-  .icon-smile:before {
-    content: "\e905";
-  }
-  .icon-star:before {
-    content: "\e906";
-  }
-  .icon-type:before {
-    content: "\e907";
-  }
-  .icon-close:before {
-    content: "\e908";
-  }

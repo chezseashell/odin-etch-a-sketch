@@ -1,6 +1,7 @@
+import * as popups from './popups/popups.js'
+
 const cols = 16;
-const startBTN = document.getElementById('start-btn');
-document.querySelector('.dialog').showModal()
+const showPrompt = document.querySelector('#showPrompt');
 
 function createGrid(cols) {
     const container = document.getElementById('container');
@@ -28,15 +29,30 @@ function createGrid(cols) {
 
  createGrid(16)
 
-  startBTN.addEventListener('click', function() {
-        
-        let newGridCol = prompt("Please indicate number of squares per side in new game");
-    
-        container.innerHTML = '';
-        if (newGridCol >= 1 && newGridCol <= 100) {
-            createGrid(newGridCol);
-          } else {
-            alert('Please enter values between 1 and 50');
-          }
-    })
+
+
+
+
+
+showPrompt.addEventListener('click', () => {
+  popups.prompt({ 
+      title: 'Input Required', 
+      message:'Please type your desired number of squares per side to start a new game and reset grid.', 
+      icon: 'alert1', 
+      defaultText: '', 
+      OkButtonText: 'START NEW GAME', 
+      cancelButtonText: 'CANCEL',
+      onOkButtonClick: function(inputValue) {
+        const gridSize = parseInt(inputValue); // Convert string to number
+        if (!isNaN(gridSize) && gridSize > 0) {
+            createGrid(gridSize); // Recreate grid with new size
+        } else {
+            console.log('Please enter a valid number');
+        }
+    },
+    onCancelButtonClick: function() {
+        console.log('Cancel Button Clicked!');
+    }
+});
+});
 
