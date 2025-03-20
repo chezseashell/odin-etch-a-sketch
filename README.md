@@ -23,7 +23,10 @@ https://codepen.io/chezseashell/pen/LEYmGgq
    git clone https://github.com/chezseashell/odin-etch-a-sketch.git
 
 ## File Structure
+```
 odin-etch-a-sketch/
 ├── index.html
 └── style.css
 └── main.js
+└── README.md
+```
