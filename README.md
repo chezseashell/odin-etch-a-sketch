@@ -21,3 +21,9 @@ https://codepen.io/chezseashell/pen/LEYmGgq
 1. Clone or download this repository:
    ```bash
    git clone https://github.com/chezseashell/odin-etch-a-sketch.git
+
+## File Structure
+odin-etch-a-sketch/
+├── index.html
+└── style.css
+└── main.js

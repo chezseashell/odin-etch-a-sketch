@@ -34,11 +34,20 @@ export function prompt( { title = '', message = '', icon = 'none', defaultText =
 
   input.addEventListener('keypress', (event) => {
       if (event.key === 'Enter' && input.value.trim() !== '') { // Check for Enter and non-empty input
-          event.preventDefault(); // Prevent default form submission behavior
-          onOkButtonClick(input.value); // Trigger the OK callback
-          close(dialog); // Close the dialog
+          event.preventDefault(); 
+          onOkButtonClick(input.value); 
+          close(dialog); 
       }
   });
+
+  btnClose.addEventListener('keypress', (event) => {
+    if (event.key === 'Esc') {
+      onCancelButtonClick()
+      close(dialog)
+    }
+    
+  })
+
 
   btnClose.addEventListener('click', () => {
     onCancelButtonClick()

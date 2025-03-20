@@ -29,13 +29,20 @@ h1 {
     margin-top: 3vh;
     letter-spacing: .2em;
     text-transform: uppercase;
+    transition: backgound-color 0.5s;
 
+}
+
+#showPrompt:hover {
+    background-color: #222;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 #container {
     display: flex;
     flex-wrap: wrap ;
-    max-width: 1024px;
+    max-width: 70vw;
     margin: auto;
     margin-top: 5vh;
     outline: 1px solid black;
