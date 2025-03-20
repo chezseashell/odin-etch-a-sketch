@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <dialog class="dialog">
+        <div class="dialog_header">
+            <span class="dialog_icon icon-alert1"></span>
+            <div class="dialog_title">Input Required</div>
+            <button class="dialog_close icon-subtract"></button>
+        </div>
+        <div class="dialog_content">
+            Please type your desired number of squares per side to start a new game and reset grid.
+            <input type="text" class="dialog_input" maxlength="3" autofocus>
+            <i></i>
+        </div>
+        <div class="dialog_footer">
+            <button class="dialog_button ">CANCEL</button>
+            <button class="dialog_button dialog_button--outline">START NEW GAME</button>
+
+        </div>
+    </dialog>
     <button id="start-btn">Start New Drawing</button>
     <div id="container"></div>
     

@@ -1,6 +1,6 @@
 const cols = 16;
 const startBTN = document.getElementById('start-btn');
-
+document.querySelector('.dialog').showModal()
 
 function createGrid(cols) {
     const container = document.getElementById('container');
