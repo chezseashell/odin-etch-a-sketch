@@ -11,7 +11,7 @@ export function prompt( { title = '', message = '', icon = 'none', defaultText =
         </div>
         <div class="dialog_content">
             ${message}
-            <input type="text" class="dialog_input" maxlength="3" autofocus>
+            <input type="text" class="dialog_input" maxlength="3" autofocus name="grid_size" required>
             <i></i>
         </div>
         <div class="dialog_footer">
@@ -37,6 +37,8 @@ export function prompt( { title = '', message = '', icon = 'none', defaultText =
           event.preventDefault(); 
           onOkButtonClick(input.value); 
           close(dialog); 
+      } else if (event.key === 'Enter' && input.value.trim() === ''){
+        alert("please enter a number")
       }
   });
 
@@ -55,8 +57,13 @@ export function prompt( { title = '', message = '', icon = 'none', defaultText =
   })
 
   btnOk.addEventListener('click', () => {
-    onOkButtonClick(input.value)
-    close(dialog)
+    if (input.value.trim() !== '') {
+      onOkButtonClick(input.value)
+      close(dialog)
+    } else {
+      alert("please enter a number")
+    }
+
   })
 
   btnCancel.addEventListener('click', () => {

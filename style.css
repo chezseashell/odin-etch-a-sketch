@@ -46,7 +46,7 @@ h1 {
     margin: auto;
     margin-top: 5vh;
     outline: 1px solid black;
-    gap: 2px;
+    gap: 0;
 }
 
 .grid-item {
